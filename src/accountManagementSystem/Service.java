@@ -40,6 +40,7 @@ public class Service {
 	public ArrayList<Account> retrieveFirstName(String firstName) {
 		
 		ArrayList<Account> list = new ArrayList<>();
+		int count = 0;
 
 		for (Map.Entry<Integer, Account> entry : hmap.entrySet()) {
 
@@ -49,9 +50,11 @@ public class Service {
 						"First Name: " + entry.getValue().getFirstName() + 
 						"\n" + "Last Name: " +entry.getValue().getLastName() + "\n");
 				list.add(entry.getValue());
+				count += 1;
 
 			}
 		}
+		System.out.println(count + " result(s) returned.");
 		System.out.println("----------------------");
 		return list;
 	}
@@ -59,7 +62,8 @@ public class Service {
 
 	public ArrayList<Account> retrieveLastName(String lastName) {
 		
-		ArrayList<Account> list = new ArrayList<>();		
+		ArrayList<Account> list = new ArrayList<>();	
+		int count = 0;
 
 		for (Map.Entry<Integer, Account> entry : hmap.entrySet()) {
 
@@ -68,11 +72,13 @@ public class Service {
 				System.out.println("Account Number: " + entry.getKey() + "\n" +
 						"First Name: " + entry.getValue().getFirstName() + 
 						"\n" + "Last Name: " +entry.getValue().getLastName()+ "\n");
+				count+= 1;
 				list.add(entry.getValue());
 
 			}
 		}
 		
+		System.out.println(count + " result(s) returned.");
 		System.out.println("----------------------");
 		return list;
 

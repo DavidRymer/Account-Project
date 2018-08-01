@@ -55,13 +55,19 @@ public class ServiceTest {
 		paul.setFirstName("Paul");
 		paul.setLastName("Smith");
 		
+		Account pauly = new Account(2);
+		pauly.setFirstName("Paul");
+		pauly.setLastName("Johnson");
+		
 		s.add(paul);
+		
 		
 		assertEquals("Incorrect", s.retrieveFirstName("Paul").get(0).getFirstName(), "Paul");
 		
-	
-
-
+		s.add(pauly);
+		
+		assertEquals("Incorrect", s.retrieveFirstName("Paul").size(), 2);
+		
 		
 	}
 	
@@ -78,8 +84,6 @@ public class ServiceTest {
 		assertEquals("Incorrect", s.retrieveLastName("Smith").get(0).getLastName(), "Smith");
 		
 		
-
-	
 		
 	}
 	
