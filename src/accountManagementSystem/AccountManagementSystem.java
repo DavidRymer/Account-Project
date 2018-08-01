@@ -1,6 +1,9 @@
 package accountManagementSystem;
 
+
 import java.util.HashMap;
+
+import org.json.JSONObject;
 
 public class AccountManagementSystem {
 	
@@ -27,6 +30,13 @@ public class AccountManagementSystem {
 		s.retrieveAN(1);
 		s.retrieveFirstName("John");
 		s.retrieveLastName("Smith");
+		
+		HashMap<Integer, Account> mapper = new HashMap<Integer, Account>();
+		mapper.put(paul.getAccountNumber(), paul);
+		mapper.put(john.getAccountNumber(), john);
+		mapper.put(steve.getAccountNumber(), steve);
+		JSONObject json = new JSONObject(mapper);
+		System.out.println(json);
 
 
 	}

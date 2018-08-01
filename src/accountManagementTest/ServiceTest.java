@@ -59,7 +59,7 @@ public class ServiceTest {
 		
 		assertEquals("Incorrect", s.retrieveFirstName("Paul").get(0).getFirstName(), "Paul");
 		
-		Service t = new Service();
+	
 
 
 		
@@ -77,7 +77,7 @@ public class ServiceTest {
 		
 		assertEquals("Incorrect", s.retrieveLastName("Smith").get(0).getLastName(), "Smith");
 		
-		Service t = new Service();
+		
 
 	
 		
