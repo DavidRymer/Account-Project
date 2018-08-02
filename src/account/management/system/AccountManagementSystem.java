@@ -1,4 +1,4 @@
-package accountManagementSystem;
+package account.management.system;
 
 
 import java.util.HashMap;
@@ -27,17 +27,20 @@ public class AccountManagementSystem {
 		s.add(steve);
 		s.add(john);
 		
+		
+		
 		s.retrieveAN(1);
 		s.retrieveFirstName("John");
 		s.retrieveLastName("Smith");
 		
-		HashMap<Integer, Account> mapper = new HashMap<Integer, Account>();
+		HashMap<Integer, Account> mapper = new HashMap<>();
 		mapper.put(paul.getAccountNumber(), paul);
 		mapper.put(john.getAccountNumber(), john);
 		mapper.put(steve.getAccountNumber(), steve);
 		JSONObject json = new JSONObject(mapper);
 		System.out.println(json);
-
+		
+		
 
 	}
 

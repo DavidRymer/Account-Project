@@ -1,4 +1,4 @@
-package accountManagementSystem;
+package account.management.system;
 
 
 

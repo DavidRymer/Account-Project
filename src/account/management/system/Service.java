@@ -1,15 +1,16 @@
-package accountManagementSystem;
+package account.management.system;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
+import org.json.JSONObject;
 
 public class Service {
 
-	public HashMap<Integer, Account> hmap = new HashMap<Integer, Account>();
+	private static HashMap<Integer, Account> hmap = new HashMap<>();
+	
+	private JSONObject jsonMap;
 
 	public void add(Account a) {
 
@@ -40,6 +41,7 @@ public class Service {
 	public ArrayList<Account> retrieveFirstName(String firstName) {
 		
 		ArrayList<Account> list = new ArrayList<>();
+		int count = 0;
 
 		for (Map.Entry<Integer, Account> entry : hmap.entrySet()) {
 
@@ -49,9 +51,11 @@ public class Service {
 						"First Name: " + entry.getValue().getFirstName() + 
 						"\n" + "Last Name: " +entry.getValue().getLastName() + "\n");
 				list.add(entry.getValue());
+				count += 1;
 
 			}
 		}
+		System.out.println(count + " result(s) returned.");
 		System.out.println("----------------------");
 		return list;
 	}
@@ -59,7 +63,8 @@ public class Service {
 
 	public ArrayList<Account> retrieveLastName(String lastName) {
 		
-		ArrayList<Account> list = new ArrayList<>();		
+		ArrayList<Account> list = new ArrayList<>();	
+		int count = 0;
 
 		for (Map.Entry<Integer, Account> entry : hmap.entrySet()) {
 
@@ -68,11 +73,13 @@ public class Service {
 				System.out.println("Account Number: " + entry.getKey() + "\n" +
 						"First Name: " + entry.getValue().getFirstName() + 
 						"\n" + "Last Name: " +entry.getValue().getLastName()+ "\n");
+				count+= 1;
 				list.add(entry.getValue());
 
 			}
 		}
 		
+		System.out.println(count + " result(s) returned.");
 		System.out.println("----------------------");
 		return list;
 
@@ -80,6 +87,12 @@ public class Service {
 
 	public HashMap<Integer, Account> getHmap() {
 		return hmap;
+	}
+	
+	public JSONObject getJSON() {
+		
+		return jsonMap;
+		
 	}
 
 }
