@@ -1,15 +1,12 @@
-package accountManagementSystem;
+package account.management.system;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
-
-import javax.swing.text.html.HTMLDocument.Iterator;
 
 public class Service {
 
-	public HashMap<Integer, Account> hmap = new HashMap<Integer, Account>();
+	private static HashMap<Integer, Account> hmap = new HashMap<>();
 
 	public void add(Account a) {
 

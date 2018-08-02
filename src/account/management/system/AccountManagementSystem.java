@@ -1,4 +1,4 @@
-package accountManagementSystem;
+package account.management.system;
 
 
 import java.util.HashMap;
@@ -33,7 +33,7 @@ public class AccountManagementSystem {
 		s.retrieveFirstName("John");
 		s.retrieveLastName("Smith");
 		
-		HashMap<Integer, Account> mapper = new HashMap<Integer, Account>();
+		HashMap<Integer, Account> mapper = new HashMap<>();
 		mapper.put(paul.getAccountNumber(), paul);
 		mapper.put(john.getAccountNumber(), john);
 		mapper.put(steve.getAccountNumber(), steve);
