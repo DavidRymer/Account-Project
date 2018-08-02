@@ -4,9 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.json.JSONObject;
+
 public class Service {
 
 	private static HashMap<Integer, Account> hmap = new HashMap<>();
+	
+	private JSONObject jsonMap;
 
 	public void add(Account a) {
 
@@ -83,6 +87,12 @@ public class Service {
 
 	public HashMap<Integer, Account> getHmap() {
 		return hmap;
+	}
+	
+	public JSONObject getJSON() {
+		
+		return jsonMap;
+		
 	}
 
 }

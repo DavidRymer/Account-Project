@@ -23,7 +23,7 @@ public class ServiceTest {
 
 		Service t = new Service();
 
-		assertNull("Incorrect", t.getHmap().get(1));
+		assertNull("Incorrect", t.getHmap().get(0));
 
 	}
 	
